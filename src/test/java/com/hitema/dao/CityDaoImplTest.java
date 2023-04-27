@@ -4,8 +4,7 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
-import com.hitema.entities.City;
-import com.hitema.entities.Country;
+
 
 import static org.junit.jupiter.api.Assertions.*;
 
