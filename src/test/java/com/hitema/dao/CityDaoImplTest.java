@@ -1,9 +1,6 @@
 package com.hitema.dao;
 
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestMethodOrder;
+import org.junit.jupiter.api.*;
 
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -20,6 +17,7 @@ public class CityDaoImplTest {
     }
 
     @Test
+        @Order(1)
     public void findCitiesByCountry() {
         var c = dao.findCitiesByCountry(34l);
         // Vérification du test
@@ -27,6 +25,7 @@ public class CityDaoImplTest {
     }
 
     @Test
+        @Order(2)
     public void findCountryByCity() {
         var c = dao.findCountryByCity(544l);
         // Vérification du test

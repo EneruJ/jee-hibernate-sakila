@@ -17,6 +17,7 @@
         <mapping class="com.hitema.entities.Film" />
         <mapping class="com.hitema.entities.City" />
         <mapping class="com.hitema.entities.Actor" />
+        <mapping class="com.hitema.entities.FilmActor" />
 
     </session-factory>
 </hibernate-configuration>

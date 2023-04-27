@@ -2,6 +2,10 @@ package com.hitema.entities;
 
 import jakarta.persistence.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
+
 @Entity
 @Table(name = "actor")
 public class Actor {
@@ -14,12 +18,12 @@ public class Actor {
 
     private String last_name;
 
+    @ManyToMany(mappedBy = "actors")
+    private Set<Film> films = new HashSet<>();
+
     public Actor() {
     }
 
-    @ManyToOne
-    @JoinColumn(name = "actor_id", insertable=false, updatable=false)
-    private Film film;
 
     public String getfirstName() {
         return first_name;

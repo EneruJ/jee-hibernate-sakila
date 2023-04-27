@@ -3,7 +3,11 @@ package com.hitema.entities;
 import com.hitema.dao.AbstractDao;
 import jakarta.persistence.*;
 
+
 import java.time.LocalDateTime;
+import java.util.HashSet;
+import java.util.Set;
+
 
 @Entity
     @Table(name="film")
@@ -19,6 +23,12 @@ public class Film {
 
     @Column(name = "last_update")
     private LocalDateTime lastUpdate;
+
+    @ManyToMany
+    @JoinTable(name = "film_actor",
+            joinColumns = @JoinColumn(name = "film_id"),
+            inverseJoinColumns = @JoinColumn(name = "actor_id"))
+    private Set<Actor> actors = new HashSet<>();
 
     public Long getId() {
         return id;

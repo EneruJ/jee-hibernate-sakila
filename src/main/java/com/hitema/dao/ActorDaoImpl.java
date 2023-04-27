@@ -1,15 +1,12 @@
 package com.hitema.dao;
 
 import com.hitema.entities.Actor;
+import com.hitema.entities.Film;
 
 
 import java.util.List;
 
 public class ActorDaoImpl extends AbstractDao implements Dao<Actor, Long>{
-
-    public List findFilmsByActor(Long id) {
-        return getCurrentSession().createQuery("from Actor where film.id = :id").setParameter("id", id).getResultList();
-    }
 
     @Override
     public Actor create(Actor entity) {
